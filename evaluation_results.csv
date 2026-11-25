@@ -1,0 +1,52 @@
+doc,page,extraction_f1,hit_at_1,hit_at_4,query
+2305.02437v3,1,0.948,1,1,The traditional approach for memory retrieval involves selecting memory that exhibits the highest similarity to the inpu
+2305.02437v3,2,0.965,0,1,We define this as the primal problem: better memory prompts better generation.
+2305.02437v3,3,0.941,0,1,"In contrast, our framework innovatively utilizes the chosen candidates as memory for the subsequent generation round of "
+2305.02437v3,4,0.9,1,1,$\mathcal{O}$ is considered as the additional information provided by the beam memory.
+2305.02437v3,5,0.799,1,1,"Consequently, we define $\Delta(\cdot, \cdot)$ as model-free metrics that are widely employed for assessing generation q"
+2305.02437v3,6,0.924,0,0,The detailed statistics for these datasets can be found in the Appendix A.
+2305.02437v3,7,0.913,0,0,"From the table, we first observe a general trend where few-shot translation performance improves as the"
+2305.02437v3,8,0.935,0,1,This suggests that demonstration examples in in-context learning not only act as triggers for model ability but also adh
+2305.02437v3,9,0.855,1,1,"Moreover, our findings indicate that retrievalaugmented models, particularly those incorporating self-memory augmentatio"
+2305.02437v3,10,0.996,1,1,"We combine the primal and dual problems together and propose Selfmem, a general framework for retrieval-augmented text g"
+2305.14160v4,1,0.932,0,0,"Label words gather information from demonstrations in shallow layers, which is then extracted in deep layers for final p"
+2305.14160v4,2,0.918,0,1,"In shallow layers, label words gather information from demonstrations to form semantic representations for deeper proces"
+2305.14160v4,3,0.833,1,1,"Proposed Hypothesis Based on this, we propose the hypothesis that label words function as anchors in the ICL information"
+2305.14160v4,4,0.851,1,1,"By manipulating the attention layer in the model to block this flow and examining the model behavior change, we validate"
+2305.14160v4,5,0.874,1,1,"Moreover, shallow layers show negligible cumulative contributions $\left(R_{l}\right)$, with a significant increase in m"
+2305.14160v4,6,0.827,1,1,"However, it is specifically designed based on our anchor hypothesis and requires fewer parameters than traditional adapt"
+2305.14160v4,7,0.872,1,1,"For example, with the GPT-J model, the compression method with anchor states only leads to a 1.5 accuracy drop compared "
+2305.14160v4,8,0.84,1,1,This high correlation indicates that ICL makes errors in categories with similar label anchors.
+2305.14160v4,9,0.957,1,1,"In this paper, we provide a novel perspective by examining the information flow in language models to gain an understand"
+2305.14160v4,10,0.939,0,1,"Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, "
+2310.11511v1,1,0.975,1,1,"In particular, given an input prompt and preceding generations, SELF-RAG first determines if augmenting the continued ge"
+2310.11511v1,2,0.777,1,1,Our analysis demonstrates the effectiveness of training and inference with reflection tokens for overall performance imp
+2310.11511v1,3,0.979,1,1,"Training LLMs with reinforcement learning (e.g., Proximal Policy Optimization or PPO; Schulman et al."
+2310.11511v1,4,0.92,1,1,"If retrieval is needed, the model generates: a critique token to evaluate the retrieved passage's relevance, the next re"
+2310.11511v1,5,0.828,0,1,"For each passage, $\mathcal{C}$ further evaluates whether the passage is relevant and predicts IsREL."
+2310.11511v1,6,0.944,1,1,"Details of our experiments' settings, including test-time instructions, are available in the Appendix Section B.1."
+2310.11511v1,7,0.979,0,0,We evaluate models augmented with retrieval at test time or during training.
+2310.11511v1,8,0.92,1,1,"Bold numbers indicate the best performance among non-proprietary models, and gray-colored bold text indicates the best p"
+2310.11511v1,9,0.924,1,1,"As the figure shows, increasing the weight leads to positive effects on the models' citation precision since this puts m"
+2310.11511v1,10,0.947,1,1,"SELF-RAG trains an LM to learn to retrieve, generate, and critique text passages and its own generation by predicting th"
+2402.03216v4,1,0.914,0,0,"Notably, we propose a novel self-knowledge distillation approach, where the relevance scores from different retrieval fu"
+2402.03216v4,2,0.933,0,0,"3) Our model, code, and data is publicly available, offering critical resources for both direct usage and future develop"
+2402.03216v4,3,0.943,0,1,"The three data sources complement to each other,
+which are applied to different stages of the training process."
+2402.03216v4,4,0.78,1,1,"For each of the retrieval methods, it is expected to assign a higher score for the query's positive samples compared wit"
+2402.03216v4,5,0.829,1,1,It also needs to keep the batch size as large as possible (introducing a huge amount of in-batch negatives) to ensure th
+2402.03216v4,6,0.921,1,1,Using the same vocabulary from XLM-Roberta can also ensure that both approaches have the same retrieval latency.
+2402.03216v4,7,0.962,0,1,"Besides, we can also observe the following interesting results which are unique to this benchmark."
+2402.03216v4,8,0.936,1,1,"Finally, the combination of different retrieval methods leads to a remarkable average performance of 65.0."
+2402.03216v4,9,0.947,0,0,"We can observe that RetroMAE can significantly improve the retrieval performance, and pre-training on unsupervised data "
+2402.03216v4,10,0.931,1,1,Colbert: Efficient and effective passage search via contextualized late interaction over bert.
+2403.20330v2,1,0.934,0,0,"The answers can be directly inferred from the questions and options, or the world knowledge embedded in LLMs."
+2403.20330v2,2,0.86,1,1,"Taking aside the inappropriate samples in evaluation, we also observed strange results that LLM and LVLM could still ans"
+2403.20330v2,3,0.981,1,1,"GPT-4V also gets the best MG and a small ML, indicating its effective multi-modal training strategy and has less data le"
+2403.20330v2,4,0.975,1,1,"Without this, evaluating LVLMs' multi-modal capabilities degrades to merely assessing their LLM backbones' uni-modal abi"
+2403.20330v2,5,0.957,0,1,We employ a 2 -shot inference strategy for evaluating all LLMs to reduce instances of refusal to answer and align the an
+2403.20330v2,6,0.957,1,1,"This result serves as a reminder: if we only consider the final accuracy on benchmarks when evaluating LVLMs, potential "
+2403.20330v2,7,0.72,1,1,This will ensure that the performance of models is evaluated on their true ability to integrate and interpret multi-moda
+2403.20330v2,8,0.909,0,0,"In Section 4.3, we introduce two benchmark-specific metrics developed to evaluate the degree of data leakage as well as "
+2403.20330v2,9,0.868,1,1,It encapsulates a set of advanced cognitive capabilities focused on understanding and interpreting individual and collec
+2403.20330v2,10,0.967,0,1,"Therefore, we propose two novel metrics to separately assess the degree of data leakage and actual performance gain from"
